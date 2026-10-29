@@ -6,7 +6,7 @@ A small collection of shell scripts for everyday Fedora use. Install once, then 
 
 | Command | Description |
 |---------|-------------|
-| [`autoupdater`](#autoupdater) | Update DNF packages and Flatpaks, check for firmware updates, optionally shut down or reboot afterwards |
+| [`autoupdate`](#autoupdate) | Update DNF packages and Flatpaks, check for firmware updates, optionally shut down or reboot afterwards |
 | [`usb-formatter`](#usb-formatter) | A Python CLI tool to safely list and format USB drives on Linux |
 
 ## Installation
@@ -35,7 +35,7 @@ sudo make uninstall
 
 ## Usage
 
-### autoupdater
+### autoupdate
 
 Runs a full system update in one command:
 
@@ -44,9 +44,9 @@ Runs a full system update in one command:
 3. Refreshes firmware metadata and lists available firmware updates (it does **not** install them)
 
 ```bash
-sudo autoupdater              # update only
-sudo autoupdater --reboot     # update, then reboot in 1 minute
-sudo autoupdater --shutdown   # update, then shut down in 1 minute
+sudo autoupdate              # update only
+sudo autoupdate --reboot     # update, then reboot in 1 minute
+sudo autoupdate --shutdown   # update, then shut down in 1 minute
 ```
 
 | Option | Description |
@@ -77,7 +77,7 @@ sudo usb-formatter
 
 - Fedora (or another DNF-based distribution)
 - `bash`
-- `flatpak` and `fwupd` for the corresponding steps in `autoupdater`
+- `flatpak` and `fwupd` for the corresponding steps in `autoupdate`
 
 ## Adding a new script
 
